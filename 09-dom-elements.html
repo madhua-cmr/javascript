@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>first button</button>
+  <button class="sb">second button</button>
+ <input type="text" onkeydown="calculatevalue(event)">
+<p></p>
+  <script>
+//window.console
+//window.document
+//window.alert
+
+//persuading to do something - coercion
+//+ => number->string
+//-*/=>string=>number=>math operation
+
+//String(8)
+//Number('34')
+const num ="232"
+console.log(Number(num));
+let num1=6
+console.log(num1=String(num1));
+console.log(typeof(num1))
+
+
+//onkeydown->eventlistener
+//keydown=value
+//onclick=click
+//onkeydown=keypress
+//onscroll=scrolling
+//onmouseenter=hovering over
+//onmouseleave=stop hovering over
+
+function calculatevalue(e){
+  console.log(e)
+  if(e.key==="Enter"){
+    document.querySelector('p').innerHTML=eval(document.querySelector('input').value)
+  }
+}
+
+
+
+//onclick=>eventlistener
+//keydown=>value
+    //javascript has a function Number() it converts string to a number  Number('10')
+    //document.body.innerHTML="hi";
+    document.title="Madhumitha";
+    document.querySelector('button').innerHTML="madhu";
+    console.log(document.querySelector("button").innerHTML);
+    console.log(document.querySelector("button").innerHTML)
+    document.querySelector(".sb").innerHTML="kebab";
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .di{
+width:150px;
+
+    }
+.di img{
+  width:100%;
+
+  object-fit: cover;
+   
+ 
+   border-radius:100px;
+   border-color:black;
+  }
+  body{
+    background-color:black
+  }
+  .tot{
+    display:flex;
+    flex-direction: row;
+   gap:50px;
+  }
+  p{
+    color:white;
+  }
+  </style>
+</head>
+<body>
+  <h2>Rock paper scissor</h2>
+  <div class="tot">
+  <div class="di" onClick="window.alert('You clicked rock');
+  play('stone');"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi25UXQIVrYs9_ASUI2hxf9b9gY1Aneicg_Q&s
+  
+  " alt="ads"></div>
+  <div class="di" onClick="window.alert('You clicked rock');
+  play('paper');"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEjyMFecj1quL7X6lCiyQsga2mM53KLmwB4R-AaDP_7cUjS1ECfjim7lzlavUWqyfpfDw&usqp=CAU" alt="ads"></div>
+  <div class="di" onClick="window.alert('You clicked rock');
+  play('scissor');"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUkJIrVbUlCAsKJR7rorApJ_Ynp72n4jWTMg&s" alt="ads"></div>
+
+</div>
+<button onClick="auto()">Auto play</button>
+  <p class="ans"></p>
+
+  <script>
+    function auto(){
+      const a=["stone","paper","scissor"];
+setInterval(function(){
+   const str=a[Math.floor(Math.random()*10)%3];
+   play(str);
+},3000);
+    }
+  let win=0,loss=0,draw=0;
+    const comp=["stone","paper","scissor"];
+    const play=(str)=>{
+ const com=Math.floor(Math.floor(Math.random()
+ *10)/3);
+ console.log(com)
+ console.log(comp[com])
+ const ans=document.querySelector('.ans')
+  if(str==comp[com]){
+  ans.innerHTML="Match draw"
+   draw++;
+  }else if(str=="scissor"&&comp[com]=="paper"){
+   ans.innerHTML="you won"
+    win++;
+  }else if(str=="paper"&&comp[com]=="scissor"){
+    win++;
+   ans.innerHTML="com won"
+  }else if(str=="stone"&&comp[com]=="paper"){
+   ans.innerHTML="com won"
+    loss++;
+  }
+  else if(str=="stone"&&comp[com]=="scissor"){
+   ans.innerHTML="you won"
+    win++;
+  }else if(str=="scissor"&&comp[com]=="stone"){
+   ans.innerHTML="com won"
+    loss++;
+  }else if(str=="paper"&&comp[com]=="stone"){
+   ans.innerHTML="you won"
+    win++;
+  }else{
+   ans.innerHTML="wrong"
+  }
+ ans.innerHTML=`win:${win},loss:${loss},withdraw:${draw}`
+    }
+  </script>
+</body>
+</html>

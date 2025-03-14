@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    const a={
+      name:"madhu",
+      phno:465,
+      college:"bit"
+    }
+
+    console.log(a['name']);
+    console.log(a['mew']);
+    console.log(typeof a['college']);
+    //1=>we use for name that contain - because js consider - as operation -> to avoid this use bracket notation
+
+    //2=> we can use expression operation or variable inside bracket notation
+a['dsf']="asdf";
+    console.log(a);
+a[`${3+6}`]=9;
+a['fun']=function(){
+  console.log("hi bro");
+}
+a.fun()
+
+    // console.log(typeof a);
+    // console.log(a.name);
+    // a.phno=884;
+    // console.log(a);
+    // a.newobj={
+    //   i:"mm",
+    //   lit:90,
+    //   ki:"ads"
+    // }
+    // console.log(a);
+    // console.log(a.mm);
+    // delete a.newobj.ki;
+    // console.log(a);
+
+
+
+
+    //dot notation 
+    //bracket notation
+
+
+
+    /*
+JSON.stringify(jsobj)=>json string
+JSON.parse(jsonstring)=>js object
+
+
+localstorage we can only store string value
+
+localStorage.setItem("hi",hi);
+localStorage.getItem("hi");
+localStorage.removeItem("hi");
+
+main diff btw jsobj and json json doesnot storre functions
+
+    */
+
+
+
+
+    /*
+null - intentionally making a vaiable value as nothing
+
+undefined - we didnt assign any value
+
+references
+
+    */
+const b=a;
+console.log(a)
+console.log(b)
+a.phno=79893;
+console.log(b);
+ console.log(a); 
+
+ /*shorthandproperty
+ const max=0;
+const a={
+max:max,
+max
+}
+
+shorthandfunction
+const a={
+max,
+method(){
+clg("hello");};
+}
+
+ */
+
+
+
+ /*
+ autoboxing - js automatically covers the string wrap the string as object and giv access to length property and toUpperCase()
+
+ FOR NUMBERS.BOOLEAN ALSO HAVE auto boxing
+ 'hello'.length
+ 'hello'.toUpperCase()
+ 
+ 3.9.toString()
+ true.toString()
+
+
+ but null and undefined not autoboxing this value
+ 
+ */
+  </script>
+</body>
+</html>

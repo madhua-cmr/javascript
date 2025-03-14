@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .mm{
+      background-color: blanchedalmond;
+    }
+    .hi1{
+      color:white;
+    }
+    .hi2{
+      color:chartreuse;
+    }
+  </style>
+</head>
+<body>
+  <button class="mm hi1" >hi</button>
+  <button class="mm hi2">hi</button>
+  <script>
+  const buttonsa=document.querySelectorAll('.mm');
+  console.log(buttonsa)
+  buttonsa.forEach((bu)=>{
+    bu.addEventListener('keydown',(event)=>{
+      console.log(event.key);
+    })
+  })
+  //removeeventlistener
+  
+  </script>
+</body>
+</html>
